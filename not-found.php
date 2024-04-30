@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Title -->
-    <title>404 Not found - Spy IT Firm | Global it Services Company.</title>
+    <title>404 Not found - <?= spy_sabbir_update('theme_default', 'company_name'); ?> | Global it Services Company.</title>
     <!-- Favicon -->
     <link rel="shortcut icon" href="assets/images/icon.ico" type="image/x-icon">
     <!-- Bootstrap CSS -->

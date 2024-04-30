@@ -5,7 +5,7 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer_item ab">
                         <a href="index.php"><img src="assets/images/<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>" alt="Footer Logo"></a>
-                        <p>Spy It Firm is the Outsourcing firm based on Freelance & Outsourcing.</p>
+                        <p><?= spy_sabbir_update('theme_default', 'company_name'); ?> is the Outsourcing firm based on Freelance & Outsourcing.</p>
                         <ul>
                             <li><i class="fas fa-map-marker-alt"></i> <?= spy_sabbir_update('theme_default', 'company_address'); ?></li>
                             <li><a href="tel:<?= spy_sabbir_update('theme_default', 'company_phone_number'); ?>"><i class="fas fa-phone-alt"></i> <?= spy_sabbir_update('theme_default', 'company_phone_number'); ?></a></li>

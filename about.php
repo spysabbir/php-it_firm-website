@@ -12,7 +12,7 @@ require_once('header.php');
                     <div class="col-lg-8 m-auto">
                         <div class="banner_text">
                             <h1>About</h1>
-                            <p>Welcome to Spy It Firm. Number one source for all things Services. We're dedicated to
+                            <p>Welcome to <?= spy_sabbir_update('theme_default', 'company_name'); ?>. Number one source for all things Services. We're dedicated to
                                 providing you the very best of Services.</p>
                             <nav aria-label="breadcrumb">
                                 <ul class="breadcrumb">
@@ -35,14 +35,14 @@ require_once('header.php');
     <div class="container">
         <div class="section_title">
             <h2>Company <span>Profile</span></h2>
-            <p>Spy It Firm one of the leading IT Services Institutes in Bangladesh.</p>
+            <p><?= spy_sabbir_update('theme_default', 'company_name'); ?> one of the leading IT Services Institutes in Bangladesh.</p>
         </div>
         <div class="row">
             <div class="col-lg-6">
                 <div class="company_profile_content">
-                    <h4>Spy It Firm is an Outsourcing firm based on Freelance & Outsourcing.</h4>
-                    <p> Spy It Firm started its journey in online outsourcing and service in January 2021. The main
-                        objective of Spy It Firm is to provide high-quality services to our valuable clients and
+                    <h4><?= spy_sabbir_update('theme_default', 'company_name'); ?> is an Outsourcing firm based on Freelance & Outsourcing.</h4>
+                    <p> <?= spy_sabbir_update('theme_default', 'company_name'); ?> started its journey in online outsourcing and service in January 2021. The main
+                        objective of <?= spy_sabbir_update('theme_default', 'company_name'); ?> is to provide high-quality services to our valuable clients and
                         achieving their full satisfaction.</p>
                     <ul>
                         <li>Name : <?= spy_sabbir_update('theme_default', 'company_name'); ?></li>

@@ -33,7 +33,7 @@ require_once('header.php');
     <div class="container">
         <div class="section_title">
             <h2>About <span>Us</span></h2>
-            <p>Spy It Firm is the Outsourcing firm based on Freelance & Outsourcing.</p>
+            <p><?= spy_sabbir_update('theme_default', 'company_name'); ?> is the Outsourcing firm based on Freelance & Outsourcing.</p>
         </div>
         <div class="row">
             <div class="col-lg-6 col-md-6">
@@ -57,7 +57,7 @@ require_once('header.php');
     <div class="container">
         <div class="section_title">
             <h2>Our <span>Services</span></h2>
-            <p>The main objective of Spy It Firm is to provide high quality services to our valuable clients and
+            <p>The main objective of <?= spy_sabbir_update('theme_default', 'company_name'); ?> is to provide high quality services to our valuable clients and
                 achieving their full satisfaction.</p>
         </div>
         <div class="row">

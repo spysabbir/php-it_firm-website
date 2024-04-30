@@ -34,7 +34,7 @@ require_once('header.php');
     <div class="container">
         <div class="section_title">
             <h2>Common <span> Questions</span></h2>
-            <p>Question & Answer about Spy It Firm services</p>
+            <p>Question & Answer about <?= spy_sabbir_update('theme_default', 'company_name'); ?> services</p>
         </div>
         <div class="row">
             <div class="col-lg-3">
@@ -337,7 +337,7 @@ require_once('header.php');
                                 </div>
                                 <div class="collapse" id="accordion-tab-5-content-2" aria-labelledby="accordion-tab-5-heading-2" data-parent="#accordion-tab-5">
                                     <div class="card-body">
-                                        <p>Spy It Firm is the Outsourcing firm based on Freelance & Outsourcing. Spy It
+                                        <p><?= spy_sabbir_update('theme_default', 'company_name'); ?> is the Outsourcing firm based on Freelance & Outsourcing. Spy It
                                             Firm started its journey in the online outsourcing and service in January
                                             2021.</p>
                                     </div>

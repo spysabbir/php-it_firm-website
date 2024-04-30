@@ -12,7 +12,7 @@ require_once('header.php');
                     <div class="col-lg-8 m-auto">
                         <div class="banner_text">
                             <h1>Services</h1>
-                            <p>The main objective of Spy It Firm is to provide high quality services to our valuable
+                            <p>The main objective of <?= spy_sabbir_update('theme_default', 'company_name'); ?> is to provide high quality services to our valuable
                                 clients and achieving their full satisfaction.</p>
                             <nav aria-label="breadcrumb">
                                 <ul class="breadcrumb">

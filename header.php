@@ -88,7 +88,7 @@ require_once('admin/db.php');
         <div class="container">
             <nav class="navbar navbar-expand-lg">
 
-                <a class="navbar-brand" href="index.php"><img src="assets/images/<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>" alt="SPY IT FIRM"></a>
+                <a class="navbar-brand" href="index.php"><img src="assets/images/<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>" alt="<?= spy_sabbir_update('theme_default', 'company_name'); ?>"></a>
 
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
