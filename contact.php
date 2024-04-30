@@ -40,65 +40,40 @@ require_once('header.php');
             <div class="col-lg-6">
                 <div class="form_area">
                     <h4>Send a message</h4>
+                    <strong id="contact_message" class="ml-2"></strong>
                     <form method="POST" action="contact_post.php">
                         <div class="form-row">
                             <div class="col-lg-12">
                                 <div class="item_box">
-                                    <input type="text" class="form-control" name="full_name" placeholder="Name*" value="<?= (isset($_SESSION['old_full_name'])) ? $_SESSION['old_full_name'] : '' ; unset($_SESSION['old_full_name'])?>">
+                                    <input type="text" class="form-control" id="client_full_name" name="full_name" placeholder="Name*" value="">
                                 </div>
-                                <?php if (isset($_SESSION['full_name_error'])) : ?>
-                                    <small class="text-danger"><?= $_SESSION['full_name_error'] ?></small>
-                                <?php
-                                endif;
-                                unset($_SESSION['full_name_error']);
-                                ?>
+                                <strong id="client_full_name_error" class="error-message text-danger"></strong>
                             </div>
                             <div class="col-lg-12">
                                 <div class="item_box">
-                                    <input type="email" class="form-control" name="email_address" placeholder="Email*" value="<?= (isset($_SESSION['old_email_address'])) ? $_SESSION['old_email_address'] : '' ; unset($_SESSION['old_email_address']) ?>">
+                                    <input type="email" class="form-control" id="client_email_address" name="email_address" placeholder="Email*" value="">
                                 </div>
-                                <?php if (isset($_SESSION['email_address_error'])) : ?>
-                                    <small class="text-danger"><?= $_SESSION['email_address_error'] ?></small>
-                                <?php
-                                endif;
-                                unset($_SESSION['email_address_error']);
-                                ?>
+                                <strong id="client_email_address_error" class="error-message text-danger"></strong>
                             </div>
                             <div class="col-lg-12">
                                 <div class="item_box">
-                                    <input type="text" class="form-control" name="phone_number" placeholder="Phone*" value="<?= (isset($_SESSION['old_phone_number'])) ? $_SESSION['old_phone_number'] : '' ; unset($_SESSION['old_phone_number'])?>">
+                                    <input type="text" class="form-control" id="client_phone_number" name="phone_number" placeholder="Phone*" value="">
                                 </div>
-                                <?php if (isset($_SESSION['phone_number_error'])) : ?>
-                                    <small class="text-danger"><?= $_SESSION['phone_number_error'] ?></small>
-                                <?php
-                                endif;
-                                unset($_SESSION['phone_number_error']);
-                                ?>
+                                <strong id="client_phone_number_error" class="error-message text-danger"></strong>
                             </div>
                             <div class="col-lg-12">
                                 <div class="item_box">
-                                    <input type="text" class="form-control" name="subject" placeholder="Subject*" value="<?= (isset($_SESSION['old_subject'])) ? $_SESSION['old_subject'] : '' ; unset($_SESSION['old_subject']) ?>">
+                                    <input type="text" class="form-control" id="client_subject" name="subject" placeholder="Subject*" value="">
                                 </div>
-                                <?php if (isset($_SESSION['subject_error'])) : ?>
-                                    <small class="text-danger"><?= $_SESSION['subject_error'] ?></small>
-                                <?php
-                                endif;
-                                unset($_SESSION['subject_error']);
-                                ?>
                             </div>
                             <div class="col-lg-12">
                                 <div class="item_box">
-                                    <textarea rows="4" class="form-control" name="message" placeholder="Message*"><?= (isset($_SESSION['old_message'])) ? $_SESSION['old_message'] : ''; unset($_SESSION['old_message']) ?></textarea>
+                                    <textarea rows="4" class="form-control" name="message" id="client_message" placeholder="Message*"></textarea>
                                 </div>
-                                <?php if (isset($_SESSION['message_error'])) : ?>
-                                    <small class="text-danger"><?= $_SESSION['message_error'] ?></small>
-                                <?php
-                                endif;
-                                unset($_SESSION['message_error']);
-                                ?>
+                                <strong id="client_message_error" class="error-message text-danger"></strong>
                             </div>
                             <div class="col-lg-12">
-                                <button type="submit" class="btn btn-success mt-3">Send</button>
+                                <button type="button" id="contact_button" class="btn btn-success mt-3">Send</button>
                             </div>
                         </div>
                     </form>

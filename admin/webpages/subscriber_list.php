@@ -4,7 +4,7 @@ $subscriber_list = true;
 require_once('../header.php');
 require_once('../db.php');
 
-$select_query = "SELECT * FROM subscribes ORDER BY id DESC";
+$select_query = "SELECT * FROM subscribers ORDER BY id DESC";
 $databage_result = mysqli_query(connect_to_db(), $select_query);
 
 ?>
@@ -43,13 +43,13 @@ $databage_result = mysqli_query(connect_to_db(), $select_query);
                         <tbody class="text-center">
                             <?php
                             $srial_no = 1;
-                            foreach (spy_sabbir_all('subscribes') as $single_subscribes) :
+                            foreach (spy_sabbir_all('subscribers') as $single_subscribers) :
                             ?>
                                 <tr>
                                     <td><?= $srial_no++ ?></td>
-                                    <td><?= strtolower($single_subscribes["subscriber_email"]) ?></td>
-                                    <td><?= date("d-M-Y h:i:sa", strtotime($single_subscribes['subscribe_date'])); ?></td>
-                                    <td><button value="webpages/subscriber_delete.php?id=<?= $single_subscribes['id'] ?>" class="btn btn-sm btn-danger delete_btn">Delete</button></td>
+                                    <td><?= strtolower($single_subscribers["subscriber_email"]) ?></td>
+                                    <td><?= date("d-M-Y h:i:sa", strtotime($single_subscribers['subscribe_date'])); ?></td>
+                                    <td><button value="webpages/subscriber_delete.php?id=<?= $single_subscribers['id'] ?>" class="btn btn-sm btn-danger delete_btn">Delete</button></td>
                                 </tr>
                             <?php endforeach; ?>
                         </tbody>

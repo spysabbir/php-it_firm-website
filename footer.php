@@ -39,23 +39,12 @@
                 <div class="col-lg-4 col-md-6">
                     <div class="footer_item sc">
                         <h3>Subscribe To The Newsletter</h3>
-                        <form method="POST" action="subscribe_post.php">
+                        <form method="POST" action="subscribe_post.php" id="subscription_form">
                             <div class="form-group">
-                                <input type="email" name="subscriber_email" class="form-control" placeholder="Enter your email" value="<?= (isset($_SESSION['old_email'])) ? $_SESSION['old_email'] : '' ; unset($_SESSION['old_email']) ?>">
-                                <button type="submit" class="btn"><i class="far fa-paper-plane"></i></button>
+                                <input type="email" name="subscriber_email" id="subscriber_email" class="form-control" placeholder="Enter your email" value="">
+                                <button type="button" id="subscribe_button" class="btn"><i class="far fa-paper-plane"></i></button>
+                                <strong id="subscription_message" class="ml-2"></strong>
                             </div>
-                            <?php if (isset($_SESSION['subscriber_email_error'])) : ?>
-                                <small class="text-danger"><?= $_SESSION['subscriber_email_error'] ?></small>
-                            <?php
-                            endif;
-                            unset($_SESSION['subscriber_email_error']);
-                            ?>
-                            <?php if (isset($_SESSION['same_email_check_error'])) : ?>
-                                <small class="text-danger"><?= $_SESSION['same_email_check_error'] ?></small>
-                            <?php
-                            endif;
-                            unset($_SESSION['same_email_check_error']);
-                            ?>
                         </form>
                         <span>Fllow Social Media</span>
                         <ul>
@@ -90,7 +79,8 @@
     <!-- Top to bottom End -->
 
     <!-- jQuery -->
-    <script src="assets/js/jquery-2.2.4.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <!-- <script src="assets/js/jquery-2.2.4.min.js"></script> -->
     <!-- Bootstrap Core JS -->
     <script src="assets/js/bootstrap.min.js"></script>
     <!-- Counter Up JS -->
@@ -106,27 +96,85 @@
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
-    <!-- Security Plugin Code -->
-    <!-- <script>
-        if (document.layers) {
-            document.captureEvents(Event.MOUSEDOWN);
-            document.onmousedown = function () {
-                return false;
-            };
+    <script>
+    $(document).ready(function() {
+      // Subscription form
+      $('#subscribe_button').click(function() {
+        var email = $('#subscriber_email').val().trim();
+
+        if (email === '') {
+          $('#subscription_message').removeClass('text-success').addClass('text-danger').text('Email cannot be blank.');
+            return;
         }
-        else {
-            document.onmouseup = function (e) {
-                if (e != null && e.type == "mouseup") {
-                    if (e.which == 2 || e.which == 3) {
-                        return false;
-                    }
+
+        $.ajax({
+          type: 'POST',
+          url: 'subscriber_post.php',
+          data: { subscriber_email: email },
+          success: function(response) {
+            var data = JSON.parse(response);
+            if (data.success) {
+              $('#subscription_message').removeClass('text-danger').addClass('text-success').text('Subscription successful!');
+              $('#subscriber_email').val('');
+            } else {
+              $('#subscription_message').removeClass('text-success').addClass('text-danger').text(data.error);
+            }
+          },
+        });
+      });
+
+      // Contact form
+      $('#contact_button').click(function() {
+        var client_full_name = $('#client_full_name').val().trim();
+        var client_email_address = $('#client_email_address').val().trim();
+        var client_phone_number = $('#client_phone_number').val().trim();
+        var client_subject = $('#client_subject').val().trim();
+        var client_message = $('#client_message').val().trim();
+        
+        $('.error-message').text('');
+        $('#contact_message').text('');
+
+        if (client_full_name === '') {
+            $('#client_full_name_error').text('Full name is required!');
+        }
+        if (client_email_address === '') {
+            $('#client_email_address_error').text('Email address is required!');
+        }
+        if (client_phone_number === '') {
+            $('#client_phone_number_error').text('Phone number is required!');
+        }
+        if (client_message === '') {
+            $('#client_message_error').text('Message is required!');
+        }
+
+        $.ajax({
+            type: 'POST',
+            url: 'contact_post.php',
+            data: { 
+                client_full_name: client_full_name, 
+                client_email_address: client_email_address, 
+                client_phone_number: client_phone_number, 
+                client_subject: client_subject,
+                client_message: client_message
+            },
+            success: function(response) {
+                var data = JSON.parse(response);
+                if (data.success) {
+                    $('#contact_message').removeClass('text-danger').addClass('text-success').text('Message sent successful!');
+                    $('#client_full_name').val('');
+                    $('#client_email_address').val('');
+                    $('#client_phone_number').val('');
+                    $('#client_subject').val('');
+                    $('#client_message').val('');
+                } else {
+                    $('#contact_message').removeClass('text-success').addClass('text-danger').text(data.error);
                 }
-            };
-        }
-        document.oncontextmenu = function () {
-            return false;
-        };
-    </script> -->
+            },
+        });
+      });
+
+    });
+  </script>
 
     </body>
 
