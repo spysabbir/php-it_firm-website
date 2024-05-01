@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.0
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 26, 2023 at 12:12 PM
--- Server version: 10.4.27-MariaDB
--- PHP Version: 8.2.0
+-- Generation Time: May 01, 2024 at 04:18 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `spyitfar_spyitfirm`
+-- Database: `it_firm-website`
 --
 
 -- --------------------------------------------------------
@@ -91,7 +91,7 @@ CREATE TABLE `clients` (
 --
 
 INSERT INTO `clients` (`id`, `clients_name`, `project_link`, `project_logo_img`) VALUES
-(1, '7etouch', 'https://7etouch.com/', '13555242321633510304.png'),
+(1, '7etouch1', 'https://7etouch.com/', '13555242321633510304.png'),
 (2, 'spyitfirm', 'www.spyitfirm.com', '4889284911633510394.png'),
 (3, 'spyitfirm', 'www.spyitfirm.com', '13146869911633510421.png'),
 (4, 'spyitfirm', 'www.spyitfirm.com', '5582696611633510438.png'),
@@ -193,9 +193,7 @@ CREATE TABLE `contacts_messages` (
 
 INSERT INTO `contacts_messages` (`id`, `full_name`, `email_address`, `phone_number`, `subject`, `message`, `message_sending_date`, `status`) VALUES
 (1, 'Sabbir Ahammed', 'sabbir@gmail.com', '01953321402', 'Test Subject', ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam velit esse eveniet obcaecati quia ducimus nihil quisquam commodi eligendi. Sit iste, id quia assumenda animi fugiat cupiditate tempore exercitationem? Id omnis consequatur itaque maxime deleniti? Autem ratione modi velit neque quas officiis tenetur voluptate nesciunt nostrum sequi cum dolorem natus itaque quisquam tempore ullam dolore sapiente aut, numquam a delectus facilis molestias architecto. Suscipit unde quibusdam nemo debitis, adipisci, ea alias possimus fugiat, itaque et dignissimos odio cumque illo voluptatibus amet dolores sint quasi est? Mollitia id consequuntur corrupti aperiam inventore perspiciatis eos, necessitatibus autem sequi nam placeat eligendi sed voluptatibus dolores architecto? Odio suscipit rem illo nemo dignissimos ex aliquid aperiam ipsum, assumenda vero eos vel sequi dolor explicabo iure consectetur adipisci quod fugit quo iusto, omnis tempora. Rerum harum numquam delectus? Nobis deserunt amet ipsa quasi laborum. Consectetur doloremque qui ullam nemo facilis voluptatem repellat provident ipsa quas est perferendis reprehenderit, dolore laboriosam laudantium minus nihil impedit velit quod aperiam placeat, dicta enim veritatis laborum! Dignissimos non laboriosam corrupti tenetur id atque suscipit minus nam aliquam iste veniam, quae culpa sapiente recusandae eos hic sunt cumque, eveniet porro. Labore, soluta aut odit in quibusdam facere libero ex fugiat neque consequuntur quam sapiente quis. Repudiandae temporibus ratione aspernatur fugit amet ullam minima quam nihil nemo est praesentium doloribus ipsum quasi esse, perferendis eius explicabo, blanditiis soluta eos. Quasi quis sed qui quos neque similique aspernatur illo, alias eos eaque, repellat aliquam mollitia quia? At dolores repellat ex quo.', '2021-09-27 14:32:05', 'read'),
-(2, 'Sovon Ahammed	', 'sovon@gmail.com', '01517 805999', 'I Need Graphics Design Services.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam velit esse eveniet obcaecati quia ducimus nihil quisquam commodi eligendi. Sit iste, id quia assumenda animi fugiat cupiditate tempore exercitationem? Id omnis consequatur itaque maxime deleniti? Autem ratione modi velit neque quas officiis tenetur voluptate nesciunt nostrum sequi cum dolorem natus itaque quisquam tempore ullam dolore sapiente aut, numquam a delectus facilis molestias architecto. Suscipit unde quibusdam nemo debitis, adipisci, ea alias possimus fugiat, itaque et dignissimos odio cumque illo voluptatibus amet dolores sint quasi est? Mollitia id consequuntur corrupti aperiam inventore perspiciatis eos, necessitatibus autem sequi nam placeat eligendi sed voluptatibus dolores architecto? Odio suscipit rem illo nemo dignissimos ex aliquid aperiam ipsum, assumenda vero eos vel sequi dolor explicabo iure consectetur adipisci quod fugit quo iusto, omnis tempora. Rerum harum numquam delectus? Nobis deserunt amet ipsa quasi laborum. Consectetur doloremque qui ullam nemo facilis voluptatem repellat provident ipsa quas est perferendis reprehenderit, dolore laboriosam laudantium minus nihil impedit velit quod aperiam placeat, dicta enim veritatis laborum! Dignissimos non laboriosam corrupti tenetur id atque suscipit minus nam aliquam iste veniam, quae culpa sapiente recusandae eos hic sunt cumque, eveniet porro. Labore, soluta aut odit in quibusdam facere libero ex fugiat neque consequuntur quam sapiente quis. Repudiandae temporibus ratione aspernatur fugit amet ullam minima quam nihil nemo est praesentium doloribus ipsum quasi esse, perferendis eius explicabo, blanditiis soluta eos. Quasi quis sed qui quos neque similique aspernatur illo, alias eos eaque, repellat aliquam mollitia quia? At dolores repellat ex quo.', '2021-10-26 10:11:49', 'read'),
-(3, 'Id6zlw5k1a', 'axmanova.vera@inbox.ru', '83491942553', ' Ð‘Ð°Ð»aÐ½Ñ Ð·aÑ‡Ð¸ÑÐ»ÐµÐ½ ', ' \r\n Ð’Ñ‹ Ð±ÑƒÐ´ÐµÑ‚Ðµ Ð·Ð°Ð±Ð»Ð¾ÐºÐ¸Ñ€Ð¾Ð²Ð°Ð½Ñ‹  \r\n \r\nÐŸÐ¾Ð´Ñ€Ð¾Ð±Ð½ÐµÐµ: https://forms.yandex.ru/u/AAAAAspyitfirm.comBBBBB/success/', '2022-05-24 12:40:58', 'read'),
-(4, 'Tyronetut', 'support@capitalfund-hk.com', '83493875776', 'Business Funding', 'Capital Fund International Limited has been working in close partnership with various Business/Financial Consultants and every business and industrial sector all over the world. \r\n \r\nOur Financial services; Funding, Loan, collateral Facilities/Instrument and expertise is the safety net that you require in your Business. \r\n \r\nRequire funding/ Loan from 1 Million to 10 Billion USD/EURO/GBP and Above? \r\n \r\n+852 3008 8373 \r\nCapital Fund International Limited \r\nhttp://www.capitalfund-hk.com/ \r\ninfo@capitalfund-hk.com', '2022-12-22 12:47:04', 'read');
+(2, 'Sovon Ahammed	', 'sovon@gmail.com', '01517 805999', 'I Need Graphics Design Services.', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores aliquam velit esse eveniet obcaecati quia ducimus nihil quisquam commodi eligendi. Sit iste, id quia assumenda animi fugiat cupiditate tempore exercitationem? Id omnis consequatur itaque maxime deleniti? Autem ratione modi velit neque quas officiis tenetur voluptate nesciunt nostrum sequi cum dolorem natus itaque quisquam tempore ullam dolore sapiente aut, numquam a delectus facilis molestias architecto. Suscipit unde quibusdam nemo debitis, adipisci, ea alias possimus fugiat, itaque et dignissimos odio cumque illo voluptatibus amet dolores sint quasi est? Mollitia id consequuntur corrupti aperiam inventore perspiciatis eos, necessitatibus autem sequi nam placeat eligendi sed voluptatibus dolores architecto? Odio suscipit rem illo nemo dignissimos ex aliquid aperiam ipsum, assumenda vero eos vel sequi dolor explicabo iure consectetur adipisci quod fugit quo iusto, omnis tempora. Rerum harum numquam delectus? Nobis deserunt amet ipsa quasi laborum. Consectetur doloremque qui ullam nemo facilis voluptatem repellat provident ipsa quas est perferendis reprehenderit, dolore laboriosam laudantium minus nihil impedit velit quod aperiam placeat, dicta enim veritatis laborum! Dignissimos non laboriosam corrupti tenetur id atque suscipit minus nam aliquam iste veniam, quae culpa sapiente recusandae eos hic sunt cumque, eveniet porro. Labore, soluta aut odit in quibusdam facere libero ex fugiat neque consequuntur quam sapiente quis. Repudiandae temporibus ratione aspernatur fugit amet ullam minima quam nihil nemo est praesentium doloribus ipsum quasi esse, perferendis eius explicabo, blanditiis soluta eos. Quasi quis sed qui quos neque similique aspernatur illo, alias eos eaque, repellat aliquam mollitia quia? At dolores repellat ex quo.', '2021-10-26 10:11:49', 'read');
 
 -- --------------------------------------------------------
 
@@ -238,8 +236,8 @@ CREATE TABLE `fun_facts` (
 --
 
 INSERT INTO `fun_facts` (`id`, `fun_fact_icon_name`, `fun_fact_title`, `fun_fact_qty`) VALUES
-(1, 'fa-trophy', 'AWARD WINNER', 55),
-(2, 'fa-coffee', 'CUP OF COFFEES', 54),
+(1, 'fa-trophy', 'AWARD WINNER', 45),
+(2, 'fa-coffee', 'CUP OF COFFEES', 50),
 (3, 'fa-handshake-o', 'HAPPY CLIENTS', 26),
 (4, 'fa-hourglass', 'PROJECT COMPLETED', 33);
 
@@ -327,27 +325,27 @@ CREATE TABLE `sliders` (
 --
 
 INSERT INTO `sliders` (`id`, `slider_content_title`, `slider_content_subtitle`, `slider_details`, `slider_btn_name`, `slider_btn_link`, `slider_banner_img`) VALUES
-(1, 'WELCOME TO Spy IT Firm', 'We Create Smart Generation', 'Spy IT Firm is an outsourcing firm based on freelance & outsourcing. Spy IT Firm started its journey in online outsourcing and service in January 2021.', 'View company profile', 'https://www.youtube.com/channel/UCUklvchGkfoy5EWPg6Ep9MQ', '1544219801634116890.jpg'),
-(2, 'WELCOME TO Spy IT Firm', 'We Create Smart Generation', 'Spy IT Firm is an outsourcing firm based on freelance & outsourcing. Spy IT Firm started its journey in online outsourcing and service in January 2021.', 'View company profile', 'https://www.youtube.com/channel/UCUklvchGkfoy5EWPg6Ep9MQ', '15440786691634116904.jpg'),
-(3, 'WELCOME TO Spy IT Firm', 'We Create Smart Generation', 'Spy IT Firm is an outsourcing firm based on freelance & outsourcing. Spy IT Firm started its journey in online outsourcing and service in January 2021.	', 'View company profile', 'https://www.youtube.com/channel/UCUklvchGkfoy5EWPg6Ep9MQ', '21092718881634117211.jpg');
+(1, 'WELCOME TO Spy IT Firm', 'We Create Smart Generation', 'Spy IT Firm is an outsourcing firm based on freelance & outsourcing. Spy IT Firm started its journey in online outsourcing and service in January 2021.', 'View company profile', 'https://www.youtube.com/', '12821940241714572413.jpg'),
+(2, 'WELCOME TO Spy IT Firm', 'We Create Smart Generation', 'Spy IT Firm is an outsourcing firm based on freelance & outsourcing. Spy IT Firm started its journey in online outsourcing and service in January 2021.', 'View company profile', 'https://www.youtube.com/', '15440786691634116904.jpg'),
+(3, 'WELCOME TO Spy IT Firm', 'We Create Smart Generation', 'Spy IT Firm is an outsourcing firm based on freelance & outsourcing. Spy IT Firm started its journey in online outsourcing and service in January 2021.	', 'View company profile', 'https://www.youtube.com/', '21092718881634117211.jpg');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `subscribes`
+-- Table structure for table `subscribers`
 --
 
-CREATE TABLE `subscribes` (
+CREATE TABLE `subscribers` (
   `id` int(11) NOT NULL,
   `subscriber_email` varchar(100) NOT NULL,
   `subscribe_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `subscribes`
+-- Dumping data for table `subscribers`
 --
 
-INSERT INTO `subscribes` (`id`, `subscriber_email`, `subscribe_date`) VALUES
+INSERT INTO `subscribers` (`id`, `subscriber_email`, `subscribe_date`) VALUES
 (1, 'sabbir@gmail.com', '2021-09-27 14:50:55'),
 (2, 'sabbirbd@gmail.com', '2021-09-27 14:52:55');
 
@@ -408,8 +406,8 @@ INSERT INTO `theme_default` (`id`, `default_item_name`, `default_item_value`) VA
 (10, 'linkedin_link', 'https://www.linkedin.com/in/spyitfirm/'),
 (11, 'pinterest_link', 'https://www.pinterest.com/spyitfirm/'),
 (12, 'youtube_link', 'https://www.youtube.com/channel/UCUklvchGkfoy5EWPg6Ep9MQ'),
-(13, 'logo_photo', '10230289001635157342.png'),
-(14, 'main_banner_photo', '17939174011635157342.jpg');
+(13, 'logo_photo', '18603246471714560673.png'),
+(14, 'main_banner_photo', '11251111161714571836.jpg');
 
 -- --------------------------------------------------------
 
@@ -427,11 +425,6 @@ CREATE TABLE `users` (
   `phone_number` varchar(50) NOT NULL,
   `password` varchar(50) NOT NULL,
   `profile_img` varchar(200) NOT NULL,
-  `about_me` text NOT NULL,
-  `facebook_profile_link` varchar(200) NOT NULL,
-  `twitter_profile_link` varchar(200) NOT NULL,
-  `instagram_profile_link` varchar(200) NOT NULL,
-  `linkedin_profile_link` varchar(200) NOT NULL,
   `created_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -439,8 +432,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `designation`, `gender`, `date_of_birth`, `email_address`, `phone_number`, `password`, `profile_img`, `about_me`, `facebook_profile_link`, `twitter_profile_link`, `instagram_profile_link`, `linkedin_profile_link`, `created_at`) VALUES
-(1, 'Sabbir Ahammed', 'admin', 'male', '1999-10-09', 'admin@email.com', '+8801953 321402', '25d55ad283aa400af464c76d713c07ad', '18781332681634791165.png', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem obcaecati voluptas dignissimos enim veniam aut cupiditate doloribus velit, dolorum quisquam incidunt nisi itaque quis eos deserunt fugiat rerum dolor laboriosam in tenetur nulla quas sequi nam minima. Nesciunt recusandae, iusto officia sit expedita ipsam! Ut accusantium odit possimus hic reiciendis!', 'https://www.facebook.com/spysabbirahammed', 'https://twitter.com/spysabbir', 'https://www.instagram.com/spysabbir/', 'https://www.linkedin.com/in/spysabbir/', '2021-10-21 10:37:12');
+INSERT INTO `users` (`id`, `full_name`, `designation`, `gender`, `date_of_birth`, `email_address`, `phone_number`, `password`, `profile_img`, `created_at`) VALUES
+(1, 'Sabbir Ahammed', 'admin', 'male', '1999-10-09', 'admin@email.com', '+8801953 321402', '25d55ad283aa400af464c76d713c07ad', '18781332681634791165.png', '2021-10-21 10:37:12'),
+(3, 'Md Sabbir Ahammed', 'user', 'male', '0000-00-00', 'sovon@gmail.com', '', '25d55ad283aa400af464c76d713c07ad', '7855577581714570492.png', '2024-05-01 17:42:16');
 
 -- --------------------------------------------------------
 
@@ -542,9 +536,9 @@ ALTER TABLE `sliders`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `subscribes`
+-- Indexes for table `subscribers`
 --
-ALTER TABLE `subscribes`
+ALTER TABLE `subscribers`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -648,9 +642,9 @@ ALTER TABLE `sliders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
--- AUTO_INCREMENT for table `subscribes`
+-- AUTO_INCREMENT for table `subscribers`
 --
-ALTER TABLE `subscribes`
+ALTER TABLE `subscribers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
@@ -669,7 +663,7 @@ ALTER TABLE `theme_default`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `working_process`
