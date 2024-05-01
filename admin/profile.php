@@ -83,11 +83,16 @@ require_once('db.php');
                 <div class="row mg-b-25 justify-content-center">
                   <div class="col-lg-4">
                     <div class="form-group">
+                      <small>Photo Size 150*150 px</small><br>
                       <input type="hidden" name="user_id" class="form-control" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['id'] ?>">
                       <input type="hidden" name="profile_old_photo" class="form-control" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['profile_img'] ?>">
                       <label class="form-control-label">Profile Photo: <span class="tx-danger">*</span></label>
                       <input class="form-control mb-2" type="file" name="profile_new_photo" onchange="readURL(this);">
-                      <small>Photo Size 150*150 px</small><br>
+                      <?php if (isset($_SESSION['profile_new_photo_error'])) : ?>
+                      <small class="text-danger"><?= $_SESSION['profile_new_photo_error'] ?></small>
+                      <?php endif;
+                        unset($_SESSION['profile_new_photo_error'])
+                      ?>
                       <img class="hidden img-thumbnail" width="150px" height="150px" id="profile_new_photo" src="img/<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['profile_img'] ?>" alt="Profile Photo" />
                       <script>
                         function readURL(input) {
@@ -109,6 +114,11 @@ require_once('db.php');
                     <div class="form-group">
                       <label class="form-control-label">Full Name: <span class="tx-danger">*</span></label>
                       <input class="form-control" type="text" name="user_name" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['full_name'] ?>">
+                      <?php if (isset($_SESSION['user_name_error'])) : ?>
+                      <small class="text-danger"><?= $_SESSION['user_name_error'] ?></small>
+                      <?php endif;
+                        unset($_SESSION['user_name_error'])
+                      ?>
                     </div>
                   </div>
                   <!-- col-6 -->
@@ -142,6 +152,11 @@ require_once('db.php');
                           </label>
                         </div><!-- col-3 -->
                       </div><!-- row -->
+                      <?php if (isset($_SESSION['user_gender_error'])) : ?>
+                      <small class="text-danger"><?= $_SESSION['user_gender_error'] ?></small>
+                      <?php endif;
+                        unset($_SESSION['user_gender_error'])
+                      ?>
                     </div>
                   </div>
                   <div class="col-lg-6">

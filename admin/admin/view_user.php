@@ -6,7 +6,6 @@ require_once('../header.php');
 require_once('../db.php');
 ?>
 
-
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="br-mainpanel">
     <div class="br-pageheader pd-y-15 pd-l-20">
@@ -21,62 +20,66 @@ require_once('../db.php');
 
         <div class="card pd-20 pd-sm-40 mt-4">
             <h6 class="card-body-title">User List</h6>
-
             <div class="row">
-                <table id="message_table" class="table table-hover table-bordered table-striped">
-                    <thead class="bg-info">
-                        <tr>
-                            <th class="text-center">Serial No</th>
-                            <th class="text-center">Full Name</th>
-                            <th class="text-center">Designation</th>
-                            <th class="text-center">Gender </th>
-                            <th class="text-center">Date Of Birth </th>
-                            <th class="text-center">Email Address</th>
-                            <th class="text-center">Phone Number</th>
-                            <th class="text-center">Account Created Date</th>
-                            <th class="text-center">Profile Images</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <?php
-                        $srial_no = 1;
-                        foreach (spy_sabbir_all('users') as $single_user) :
-                        ?>
+                <div class="table-responsivee">
+                    <table id="message_table" class="table table-hover table-bordered table-striped">
+                        <thead class="bg-info">
                             <tr>
-                                <td>
-                                    <?= $srial_no++ ?>
-                                </td>
-                                <td>
-                                    <?= $single_user['full_name'] ?>
-                                </td>
-                                <td>
-                                    <?= ucfirst($single_user['designation']) ?>
-                                </td>
-                                <td>
-                                    <?= ucfirst($single_user['gender']) ?>
-                                </td>
-                                <td>
-                                    <?= $single_user['date_of_birth'] ?>
-                                </td>
-                                <td>
-                                    <?= $single_user['email_address'] ?>
-                                </td>
-                                <td>
-                                    <?= $single_user['phone_number'] ?>
-                                </td>
-                                <td>
-                                    <?= $single_user['created_at'] ?>
-                                </td>
-                                <td>
-                                    <img height="100" width="80" src="img/<?= $single_user['profile_img'] ?>" alt="">
-                                </td>
+                                <th class="text-center">Serial No</th>
+                                <th class="text-center">Full Name</th>
+                                <th class="text-center">Designation</th>
+                                <th class="text-center">Gender </th>
+                                <th class="text-center">Date Of Birth </th>
+                                <th class="text-center">Email Address</th>
+                                <th class="text-center">Phone Number</th>
+                                <th class="text-center">Account Created Date</th>
+                                <th class="text-center">Profile Images</th>
+                                <th class="text-center">Action</th>
                             </tr>
-                        <?php endforeach; ?>
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                            <?php
+                            $srial_no = 1;
+                            foreach (spy_sabbir_all('users') as $single_user) :
+                            ?>
+                                <tr>
+                                    <td>
+                                        <?= $srial_no++ ?>
+                                    </td>
+                                    <td>
+                                        <?= $single_user['full_name'] ?>
+                                    </td>
+                                    <td>
+                                        <?= ucfirst($single_user['designation']) ?>
+                                    </td>
+                                    <td>
+                                        <?= ucfirst($single_user['gender']) ?>
+                                    </td>
+                                    <td>
+                                        <?= $single_user['date_of_birth'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $single_user['email_address'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $single_user['phone_number'] ?>
+                                    </td>
+                                    <td>
+                                        <?= $single_user['created_at'] ?>
+                                    </td>
+                                    <td>
+                                        <img height="100" width="80" src="img/<?= $single_user['profile_img'] ?>" alt="">
+                                    </td>
+                                    <td>
+                                        <a href="admin/delete_user.php?id=<?= $single_user['id'] ?>" class="btn btn-danger">Delete</a>
+                                    </td>
+                                </tr>
+                            <?php endforeach; ?>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
-
     </div><!-- br-pagebody -->
 
     <?php

@@ -17,7 +17,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Meta -->
-    <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+    <meta name="description" content="<?= spy_sabbir_update('theme_default', 'company_name'); ?> Premium Quality Dashboard.">
     <meta name="author" content="<?= spy_sabbir_update('theme_default', 'company_name'); ?>">
 
     <title><?= spy_sabbir_update('theme_default', 'company_name'); ?> | Admin Panel</title>
@@ -35,13 +35,11 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
     <!--  -->
     <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.css" rel="stylesheet">
 
-
     <!-- Bracket CSS -->
     <link rel="stylesheet" href="css/bracket.css">
 </head>
 
 <body>
-
     <!-- ########## START: LEFT PANEL ########## -->
     <div class="br-logo"><a href=""><span>[</span><?= spy_sabbir_update('theme_default', 'company_name'); ?><span>]</span></a></div>
     <div class="br-sideleft overflow-y-auto">
@@ -69,7 +67,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 </div><!-- menu-item -->
             </a><!-- br-menu-link -->
 
-            <a href="#" class="br-menu-link <?= (isset($home_page)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($home_page)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-home tx-26" aria-hidden="true"></i>
                     <span class="menu-item-label">Home Page</span>
@@ -83,7 +81,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 <li class="nav-item"><a href="webpages/home_page/our_amazing_clients.php" class="nav-link <?= (isset($our_amazing_clients)) ? 'active' : '' ?>">Our Amazing Clients</a></li>
             </ul>
 
-            <a href="#" class="br-menu-link <?= (isset($about_page)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($about_page)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-info tx-28" aria-hidden="true"></i>
                     <span class="menu-item-label">About Page</span>
@@ -96,7 +94,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 <li class="nav-item"><a href="webpages/about_page/our_team.php" class="nav-link <?= (isset($our_team)) ? 'active' : '' ?>">Our Team</a></li>
             </ul>
 
-            <a href="#" class="br-menu-link <?= (isset($services_page)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($services_page)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-cogs tx-20" aria-hidden="true"></i>
                     <span class="menu-item-label">Services Page</span>
@@ -109,7 +107,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 <li class="nav-item"><a href="webpages/services_page/why_choose_us.php" class="nav-link <?= (isset($why_choose_us)) ? 'active' : '' ?>">Why Choose Us</a></li>
             </ul>
 
-            <a href="#" class="br-menu-link <?= (isset($portfolio_page)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($portfolio_page)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-briefcase tx-20" aria-hidden="true"></i>
                     <span class="menu-item-label">Portfolio Page</span>
@@ -120,7 +118,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 <li class="nav-item"><a href="webpages/portfolio_page/our_portfolio.php" class="nav-link <?= (isset($our_portfolio)) ? 'active' : '' ?>">Our Portfolio</a></li>
             </ul>
 
-            <a href="#" class="br-menu-link <?= (isset($blog_page)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($blog_page)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-newspaper-o tx-20" aria-hidden="true"></i>
                     <span class="menu-item-label">Blog Page</span>
@@ -131,7 +129,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 <li class="nav-item"><a href="webpages/blog_page/my_blog.php" class="nav-link <?= (isset($my_blog)) ? 'active' : '' ?>">My Blog</a></li>
             </ul>
 
-            <a href="#" class="br-menu-link <?= (isset($contact_page)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($contact_page)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-envelope-open-o tx-20" aria-hidden="true"></i>
                     <span class="menu-item-label">Contact Page</span>
@@ -149,9 +147,9 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 </div><!-- menu-item -->
             </a><!-- br-menu-link -->
 
+            <?php if (spy_sabbir_single_select('users', $_SESSION['user_id'])['designation'] == 'admin') : ?>
             <label class="sidebar-label pd-x-15 mg-y-10 tx-info op-9">Admin</label>
-
-            <a href="#" class="br-menu-link <?= (isset($user)) ? 'active' : '' ?>">
+            <a href="#" class="br-menu-link <?= (isset($user)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">
                     <i class="fa fa-users tx-20" aria-hidden="true"></i>
                     <span class="menu-item-label">User</span>
@@ -162,6 +160,8 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 <li class="nav-item"><a href="admin/create_user.php" class="nav-link <?= (isset($create_user)) ? 'active' : '' ?>">Create User</a></li>
                 <li class="nav-item"><a href="admin/view_user.php" class="nav-link <?= (isset($view_user)) ? 'active' : '' ?>">User List</a></li>
             </ul>
+            <?php endif; ?>
+
         </div><!-- br-sideleft-menu -->
         <label class="sidebar-label p-2 m-3 text-center bg-info op-9"><?= spy_sabbir_update('theme_default', 'company_name'); ?></label>
     </div><!-- br-sideleft -->

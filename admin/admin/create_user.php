@@ -72,7 +72,6 @@ require_once('../db.php');
             <select name="designation" class="form-control custom-select">
               <option value="">Choose your designation</option>
               <option value="admin" <?= (isset($_SESSION['old_designation']) && $_SESSION['old_designation'] == 'admin') ? 'selected' : '' ?>>Admin</option>
-              <option value="developer" <?= (isset($_SESSION['old_designation']) && $_SESSION['old_designation'] == 'developer') ? 'selected' : '' ?>>Developer</option>
               <option value="user" <?= (isset($_SESSION['old_designation']) && $_SESSION['old_designation'] == 'user') ? 'selected' : '';
                                     unset($_SESSION['old_designation']) ?>>User</option>
             </select>

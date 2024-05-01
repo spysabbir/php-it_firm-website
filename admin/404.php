@@ -9,7 +9,7 @@ require_once('db.php')
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Meta -->
-  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="description" content="<?= spy_sabbir_update('theme_default', 'company_name'); ?> Dashboard.">
   <meta name="author" content="<?= spy_sabbir_update('theme_default', 'company_name'); ?>">
 
   <title>404 Not Found! <?= spy_sabbir_update('theme_default', 'company_name'); ?> Admin Template</title>

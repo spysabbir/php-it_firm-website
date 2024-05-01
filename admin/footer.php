@@ -14,7 +14,6 @@
     </div><!-- br-mainpanel -->
     <!-- ########## END: MAIN PANEL ########## -->
 
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function() {
@@ -55,17 +54,12 @@
     <script src="lib/datatables/pdfmake/vfs_fonts.js"></script>
     <script src="lib/datatables/buttons/js/buttons.html5.min.js"></script>
     <script src="lib/datatables/buttons/js/buttons.print.min.js"></script>
-    <!--  -->
+    <!-- summernote -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
-
 
     <script>
         $(function() {
             'use strict'
-            // FOR DEMO ONLY
-            // menu collapsed by default during first page load or refresh with screen
-            // having a size between 992px and 1299px. This is intended on this page only
-            // for better viewing of widgets demo.
             $(window).resize(function() {
                 minimizeMenu();
             });

@@ -5,8 +5,8 @@ require_once "../../db.php";
 
 if ($_FILES['new_slider_banner_img']['name']) {
     // Photo Delate
-    $link = $_SERVER['DOCUMENT_ROOT'] . "/Spy_IT_Firm/assets/images/slider/" . $_POST['old_slider_banner_img'];
-    unlink($link);
+    $oldPhotoPath = "../../../assets/images/slider/slider/". $_POST['old_slider_banner_img'];
+    unlink($oldPhotoPath);
     // Photo Upload Start
     $uploaded_photo = $_FILES['new_slider_banner_img'];
     $after_explode = explode('.', $uploaded_photo['name']);
@@ -15,7 +15,6 @@ if ($_FILES['new_slider_banner_img']['name']) {
     $new_location = '../../../assets/images/slider/' . $new_photo_name;
     move_uploaded_file($uploaded_photo_temporary_location, $new_location);
     // Update Query
-
     $old_slider_banner_img = $_POST['old_slider_banner_img'];
     $update_query = "UPDATE sliders SET slider_banner_img = '$new_photo_name' WHERE slider_banner_img = '$old_slider_banner_img'";
     mysqli_query(connect_to_db(), $update_query);

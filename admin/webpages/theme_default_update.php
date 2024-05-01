@@ -4,8 +4,8 @@ require_once('../db.php');
 
 if ($_FILES['logo_new_photo']['name']) {
     // Photo Delate
-    $link1 = $_SERVER['DOCUMENT_ROOT'] . "/Spy_IT_Firm/assets/images/" . $_POST['logo_old_photo'];
-    unlink($link1);
+    $oldPhotoPath = "../../assets/images/". $_POST['logo_old_photo'];
+    unlink($oldPhotoPath);
     // Photo Upload Start
     $uploaded_photo = $_FILES['logo_new_photo'];
     $after_explode = explode('.', $uploaded_photo['name']);
@@ -22,8 +22,8 @@ if ($_FILES['logo_new_photo']['name']) {
 
 if ($_FILES['new_main_banner_photo']['name']) {
     // Photo Delate
-    $link2 = $_SERVER['DOCUMENT_ROOT'] . "/Spy_IT_Firm/assets/images/" . $_POST['old_main_banner_photo'];
-    unlink($link2);
+    $oldPhotoPath = "../../assets/images/". $_POST['old_main_banner_photo'];
+    unlink($oldPhotoPath);
     // Photo Upload Start
     $uploaded_photo = $_FILES['new_main_banner_photo'];
     $after_explode = explode('.', $uploaded_photo['name']);
@@ -41,6 +41,7 @@ if ($_FILES['new_main_banner_photo']['name']) {
     $update_query = "UPDATE theme_default SET default_item_value = '$default_item_value' WHERE  default_item_name = '$default_item_name'";
     mysqli_query(connect_to_db(), $update_query);
     $_SESSION['add_status'] = "Default Content Upload Successfully!";
-    header('location: theme_default.php');}
+    header('location: theme_default.php');
+}
 
 ?>

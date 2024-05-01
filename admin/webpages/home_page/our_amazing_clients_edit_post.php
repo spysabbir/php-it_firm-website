@@ -5,8 +5,8 @@ require_once "../../db.php";
 
 if ($_FILES['clients_new_cover_photo']['name']) {
     // Photo Delate
-    $link = $_SERVER['DOCUMENT_ROOT'] . "/Spy_IT_Firm/assets/images/clients/" . $_POST['clients_old_photo_name'];
-    unlink($link);
+    $oldPhotoPath = "../../../assets/images/clients/". $_POST['clients_old_photo_name'];
+    unlink($oldPhotoPath);
     // Photo Upload Start
     $uploaded_photo = $_FILES['clients_new_cover_photo'];
     $after_explode = explode('.', $uploaded_photo['name']);

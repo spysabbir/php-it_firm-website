@@ -31,7 +31,7 @@ if (!$_POST['designation']) {
 }
 
 if (!empty($_POST["password"]) && $_POST["password"] != "") {
-    if (strlen($_POST["password"]) <= '8') {
+    if (strlen($_POST["password"]) < 8) {
         $_SESSION['password_error'] = "Your Password Must Contain At Least 8 Digits !.";
         $signup_ability = false;
     } elseif (!preg_match("#[0-9]+#", $_POST["password"])) {

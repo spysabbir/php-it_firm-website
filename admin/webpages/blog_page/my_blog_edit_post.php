@@ -5,8 +5,8 @@ session_start();
 
     if($_FILES['blog_new_cover_photo']['name']){
         // Photo Delate
-        $link = $_SERVER['DOCUMENT_ROOT']."/Spy_IT_Firm/assets/images/blog/".$_POST['blog_old_photo_name'];
-        unlink($link);
+        $oldPhotoPath = "../../../assets/images/blog/". $_POST['blog_old_photo_name'];
+        unlink($oldPhotoPath);
         // Photo Upload Start
         $uploaded_photo = $_FILES['blog_new_cover_photo'];
         $after_explode = explode('.', $uploaded_photo['name']);

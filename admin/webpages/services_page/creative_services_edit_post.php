@@ -5,8 +5,8 @@ require_once "../../db.php";
 
 if ($_FILES['services_new_cover_photo']['name']) {
     // Photo Delate
-    $link = $_SERVER['DOCUMENT_ROOT'] . "/Spy_IT_Firm/assets/images/services/" . $_POST['services_old_photo_name'];
-    unlink($link);
+    $oldPhotoPath = "../../../assets/images/services/". $_POST['services_old_photo_name'];
+    unlink($oldPhotoPath);
     // Photo Upload Start
     $uploaded_photo = $_FILES['services_new_cover_photo'];
     $after_explode = explode('.', $uploaded_photo['name']);
@@ -21,8 +21,8 @@ if ($_FILES['services_new_cover_photo']['name']) {
 }
 if ($_FILES['services_new_banner_photo']['name']) {
     // Photo Delate
-    $link = $_SERVER['DOCUMENT_ROOT'] . "/Spy_IT_Firm/assets/images/services/" . $_POST['services_old_banner_photo'];
-    unlink($link);
+    $oldPhotoPath = "../../../assets/images/services/". $_POST['services_old_banner_photo'];
+    unlink($oldPhotoPath);
     // Photo Upload Start
     $uploaded_photo = $_FILES['services_new_banner_photo'];
     $after_explode = explode('.', $uploaded_photo['name']);

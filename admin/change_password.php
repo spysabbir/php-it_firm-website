@@ -24,8 +24,6 @@ require_once('db.php');
     </div><!-- card-body -->
   </div><!-- card -->
 
-
-
   <div class="row">
     <div class="col-lg-12">
       <div class="card pd-20 pd-xs-30 shadow-base bd-0 mg-t-30">
