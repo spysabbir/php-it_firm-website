@@ -3,16 +3,15 @@ require_once('header.php');
 require_once('db.php');
 ?>
 
-
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="br-mainpanel br-profile-page">
 
   <div class="card shadow-base bd-0 rounded-0 widget-4">
     <div class="card-header ht-75">
-      <div class="hidden-xs-down">
+      <div class="hidden-xs-down text-white">
         <h3><?= spy_sabbir_update('theme_default', 'company_name'); ?></h3>
       </div>
-      <div class="tx-24 hidden-xs-down">
+      <div class="tx-24 hidden-xs-down text-white">
         <h3><?= spy_sabbir_update('theme_default', 'company_name'); ?></h3>
       </div>
     </div>
@@ -22,15 +21,6 @@ require_once('db.php');
       </div><!-- card-profile-img -->
       <h4 class="tx-normal tx-roboto tx-white"><?= spy_sabbir_single_select('users', $_SESSION['user_id'])['full_name'] ?></h4>
       <p class="mg-b-25"><?= ucfirst(spy_sabbir_single_select('users', $_SESSION['user_id'])['designation']) ?></p>
-
-      <p class="wd-md-1000 mg-md-l-auto mg-md-r-auto mg-b-25"><?= spy_sabbir_single_select('users', $_SESSION['user_id'])['about_me'] ?></p>
-
-      <p class="mg-b-0 tx-24">
-        <a href="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['facebook_profile_link'] ?>" class="tx-white-8 mg-r-5"><i class="fa fa-facebook-official"></i></a>
-        <a href="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['twitter_profile_link'] ?>" class="tx-white-8 mg-r-5"><i class="fa fa-twitter"></i></a>
-        <a href="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['instagram_profile_link'] ?>" class="tx-white-8 mg-r-5"><i class="fa fa-instagram"></i></a>
-        <a href="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['linkedin_profile_link'] ?>" class="tx-white-8"><i class="fa fa-linkedin"></i></a>
-      </p>
     </div><!-- card-body -->
   </div><!-- card -->
 
@@ -98,7 +88,7 @@ require_once('db.php');
                       <label class="form-control-label">Profile Photo: <span class="tx-danger">*</span></label>
                       <input class="form-control mb-2" type="file" name="profile_new_photo" onchange="readURL(this);">
                       <small>Photo Size 150*150 px</small><br>
-                      <img class="hidden img-thumbnail" width="150px" height="150px" id="profile_new_photo" src="#" alt="Profile Photo" />
+                      <img class="hidden img-thumbnail" width="150px" height="150px" id="profile_new_photo" src="img/<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['profile_img'] ?>" alt="Profile Photo" />
                       <script>
                         function readURL(input) {
                           if (input.files && input.files[0]) {
@@ -132,7 +122,6 @@ require_once('db.php');
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label">Gender: <span class="tx-danger">*</span></label>
-
                       <div class="row mg-t-10">
                         <div class="col-lg-3">
                           <label class="rdiobox">
@@ -161,41 +150,8 @@ require_once('db.php');
                       <input class="form-control" type="date" name="user_date_of_birth" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['date_of_birth'] ?>">
                     </div>
                   </div>
-                  <div class="col-lg-12">
-                    <div class="form-group mg-b-10-force">
-                      <label class="form-control-label">About Me: <span class="tx-danger">*</span></label>
-                      <textarea class="form-control" name="about_me" rows="4"><?= spy_sabbir_single_select('users', $_SESSION['user_id'])['about_me'] ?></textarea>
-                    </div>
-                  </div>
                   <!-- col-6 -->
                 </div><!-- row -->
-                <div class="row mt-3">
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="form-control-label">Facebook Profile Link: <span class="tx-danger">*</span></label>
-                      <input class="form-control" type="text" name="facebook_link" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['facebook_profile_link'] ?>">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="form-control-label">Twitter Profile Link: <span class="tx-danger">*</span></label>
-                      <input class="form-control" type="text" name="twitter_link" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['twitter_profile_link'] ?>">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="form-control-label">Instagram Profile Link: <span class="tx-danger">*</span></label>
-                      <input class="form-control" type="text" name="instagram_link" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['instagram_profile_link'] ?>">
-                    </div>
-                  </div>
-                  <div class="col-lg-3">
-                    <div class="form-group">
-                      <label class="form-control-label">Linkedin Profile Link: <span class="tx-danger">*</span></label>
-                      <input class="form-control" type="text" name="linkedin_link" value="<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['linkedin_profile_link'] ?>">
-                    </div>
-                  </div>
-                </div>
-
                 <div class="form-layout-footer text-center mt-3">
                   <a class="btn btn-info mg-r-5 text-white" id="edit_btn">Edit Profile</a>
                 </div><!-- form-layout-footer -->

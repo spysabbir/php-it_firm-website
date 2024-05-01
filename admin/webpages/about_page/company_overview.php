@@ -19,12 +19,10 @@ require_once('../../db.php');
   <div class="br-pagebody">
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Company Overview</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Update Company Overview</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <form method="POST" action="webpages/about_page/company_overview_update.php" enctype="multipart/form-data" id="edit_form">
         <div class="form-layout">

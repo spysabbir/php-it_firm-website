@@ -5,7 +5,6 @@ require_once('../header.php');
 require_once('../db.php');
 ?>
 
-
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="br-mainpanel">
 
@@ -20,23 +19,14 @@ require_once('../db.php');
 
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Theme Default</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Update Theme Default</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <form method="POST" action="webpages/theme_default_update.php" enctype="multipart/form-data" id="edit_form">
         <div class="form-layout">
           <div class="row d-flex justify-content-center">
-            <!-- <div class="col-lg-6">
-              <div class="form-group">
-                <label class="form-control-label">Logo Old Photo: <span class="tx-danger">*</span></label>
-                <input type="hidden" name="logo_old_photo" class="form-control" value="<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>">
-                <img width="180" height="70" src="../assets/images/<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>" alt="">
-              </div>
-            </div> -->
             <div class="col-lg-4">
               <div class="form-group">
                 <input type="hidden" name="logo_old_photo" class="form-control" value="<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>">
@@ -47,8 +37,8 @@ require_once('../db.php');
                 <?php endif;
                 unset($_SESSION['logo_new_photo_error'])
                 ?>
-                <small>Photo Size 1920*1080 px</small><br>
-                <img class="hidden img-thumbnail" id="logo_new_photo" src="#" alt="Banner New Photo" />
+                <small>Photo Size 120*80 px</small><br>
+                <img class="hidden img-thumbnail" id="logo_new_photo" src="../assets/images/<?= spy_sabbir_update('theme_default', 'logo_photo'); ?>" alt="logo new photo" />
                 <script>
                   function readURL(input) {
                     if (input.files && input.files[0]) {
@@ -63,29 +53,20 @@ require_once('../db.php');
                 </script>
               </div>
             </div><!-- col-4 -->
-          </div>
-          <div class="row d-flex justify-content-center">
-            <!-- <div class="col-lg-6">
-              <div class="form-group">
-                <label class="form-control-label">Old Main Banner Photo: <span class="tx-danger">*</span></label>
-                <input type="hidden" name="old_main_banner_photo" class="form-control" value="<?= spy_sabbir_update('theme_default', 'main_banner_photo'); ?>">
-                <img width="180" height="70" src="../assets/images/<?= spy_sabbir_update('theme_default', 'main_banner_photo'); ?>" alt="">
-              </div>
-            </div> -->
             <div class="col-lg-4">
               <div class="form-group">
                 <input type="hidden" name="old_main_banner_photo" class="form-control" value="<?= spy_sabbir_update('theme_default', 'main_banner_photo'); ?>">
                 <label class="form-control-label">New Main Banner Photo: <span class="tx-danger">*</span></label>
-                <input class="form-control" type="file" name="new_main_banner_photo" onchange="readURL(this);">
+                <input class="form-control" type="file" name="new_main_banner_photo" onchange="bannerPhotoReadURL(this);">
                 <?php if (isset($_SESSION['new_main_banner_photo_error'])) : ?>
                   <small class="text-danger"><?= $_SESSION['new_main_banner_photo_error'] ?></small>
                 <?php endif;
                 unset($_SESSION['new_main_banner_photo_error'])
                 ?>
                 <small>Photo Size 1920*1080 px</small><br>
-                <img class="hidden img-thumbnail" id="new_main_banner_photo" src="#" alt="Main Banner New Photo" />
+                <img class="hidden img-thumbnail" id="new_main_banner_photo" src="../assets/images/<?= spy_sabbir_update('theme_default', 'main_banner_photo'); ?>" alt="Main Banner New Photo" />
                 <script>
-                  function readURL(input) {
+                  function bannerPhotoReadURL(input) {
                     if (input.files && input.files[0]) {
                       var reader = new FileReader();
                       reader.onload = function(e) {

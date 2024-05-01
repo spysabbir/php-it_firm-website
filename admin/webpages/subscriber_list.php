@@ -21,11 +21,9 @@ $databage_result = mysqli_query(connect_to_db(), $select_query);
     <div class="br-pagebody">
         <div class="title text-center my-5">
             <h4 class="tx-gray-800">Subscriber List</h4>
-            <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
         </div>
         <div class="card pd-20 pd-sm-40">
             <h6 class="card-body-title">Subscriber List</h6>
-            <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
             <div class="card text-start|center|end">
                 <div class="card-header">
                     <h4 class="card-title">All Subscriber (Total: <?= mysqli_num_rows($databage_result) ?>)</h4>

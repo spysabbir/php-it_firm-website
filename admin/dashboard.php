@@ -19,7 +19,6 @@ require_once "db.php";
 
         <div class="title text-center my-5">
             <h4 class="tx-gray-800">Dashboard</h4>
-            <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
         </div>
 
         <div class="row my-5">

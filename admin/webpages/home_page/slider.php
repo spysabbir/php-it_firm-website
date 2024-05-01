@@ -22,12 +22,10 @@ require_once('../../db.php');
 
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Slider Add</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Add Slider</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <form method="POST" action="webpages/home_page/slider_post.php" enctype="multipart/form-data">
         <div class="form-layout">
@@ -110,12 +108,10 @@ require_once('../../db.php');
 
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Slider List</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Slider List</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <div class="card text-start|center|end">
         <div class="card-body">

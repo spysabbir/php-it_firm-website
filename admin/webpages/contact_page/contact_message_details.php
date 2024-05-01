@@ -25,9 +25,7 @@ $single_contacts_messages = mysqli_fetch_assoc(mysqli_query(connect_to_db(), $se
     </div><!-- br-pageheader -->
     <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
         <h4 class="tx-gray-800 mg-b-5">Contact Message Page Layout</h4>
-        <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
-
 
     <div class="br-pagebody">
         <div class="card text-start|center|end">

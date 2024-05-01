@@ -52,16 +52,6 @@ if (!empty($_POST["password"]) && $_POST["password"] != "") {
     $signup_ability = false;
 }
 
-if(!$_POST['confirm_password']){
-    $_SESSION['confirm_password_error'] = "Please fill up your confirm password.";
-    $signup_ability = false;
-}else{
-    if ($_POST['password'] != $_POST['confirm_password']) {
-        $_SESSION['password_match_error'] = "Your password & confirm password not match.";
-        $signup_ability = false;
-    }
-}
-
 if($signup_ability){
 
     $full_name = $_POST['full_name'];
@@ -75,7 +65,6 @@ if($signup_ability){
         $_SESSION['same_email_check_error'] = "This Email Already Taken";
         header('location: create_user.php');
     }else{
-
         date_default_timezone_set('Asia/Dhaka');
         $current_date_time = date('Y-m-d H:i:s');
         
@@ -94,6 +83,5 @@ if($signup_ability){
 else{
     header('location: create_user.php');
     $_SESSION['error_status'] = "Somthing Is wrong. Account not created!";
-
 }
 ?>

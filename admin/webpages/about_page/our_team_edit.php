@@ -20,12 +20,10 @@ require_once('../../db.php');
     <div class="br-pagebody">
         <div class="title text-center my-5">
             <h4 class="tx-gray-800">Edit Our Team</h4>
-            <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
         </div>
 
         <div class="card pd-20 pd-sm-40 mt-4">
             <h6 class="card-body-title">Edit Our Team</h6>
-            <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
             <form method="POST" action="webpages/about_page/our_team_edit_post.php" enctype="multipart/form-data" id="edit_form">
                 <div class="form-layout">
@@ -75,10 +73,12 @@ require_once('../../db.php');
                             <div class="row">
                                 <div class="col-lg-6">
                                     <div class="form-group">
+                                        <input type="hidden" name="old_team_member_photo" class="form-control" value="<?= spy_sabbir_single_select('team_members', $_GET['id'])['team_member_photo'] ?>">
+                                        <input type="hidden" name="team_member_id" class="form-control" value="<?= $_GET['id'] ?>">
                                         <label class="form-control-label">Team Member Photo: <span class="tx-danger">*</span></label>
                                         <input class="form-control mb-2" type="file" name="new_team_member_photo" onchange="readURL(this);">
                                         <small>Photo Size 640*520 px</small><br>
-                                        <img class="hidden img-thumbnail" id="new_team_member_photo" src="#" alt="Team Member New Photo" />
+                                        <img class="hidden img-thumbnail" id="new_team_member_photo" src="../assets/images/team_member/<?= spy_sabbir_single_select('team_members', $_GET['id'])['team_member_photo'] ?>" alt="Team Member New Photo" />
                                         <script>
                                             function readURL(input) {
                                                 if (input.files && input.files[0]) {
@@ -91,14 +91,6 @@ require_once('../../db.php');
                                                 }
                                             }
                                         </script>
-                                    </div>
-                                </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label class="form-control-label">Team Member Old Photo: <span class="tx-danger">*</span></label>
-                                        <input type="hidden" name="old_team_member_photo" class="form-control" value="<?= spy_sabbir_single_select('team_members', $_GET['id'])['team_member_photo'] ?>">
-                                        <input type="hidden" name="team_member_id" class="form-control" value="<?= $_GET['id'] ?>">
-                                        <img height="160px" width="120px" class="img-thumbnail" src="../assets/images/team_member/<?= spy_sabbir_single_select('team_members', $_GET['id'])['team_member_photo'] ?>" alt="">
                                     </div>
                                 </div>
                             </div>

@@ -16,7 +16,6 @@ require_once('../db.php');
   </div><!-- br-pageheader -->
   <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
     <h4 class="tx-gray-800 mg-b-5">Calender Page Layout</h4>
-    <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
   </div>
 
   <div class="br-pagebody mg-y-25 pd-x-30">

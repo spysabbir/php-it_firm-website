@@ -1,9 +1,9 @@
 <base href="../../">
 <?php
-$home_page = true;
-$client_testimonial = true;
-require_once('../../header.php');
-require_once('../../db.php');
+  $home_page = true;
+  $client_testimonial = true;
+  require_once('../../header.php');
+  require_once('../../db.php');
 ?>
 
 
@@ -20,12 +20,10 @@ require_once('../../db.php');
   <div class="br-pagebody">
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Client Testimonial Add</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Add Amazing Client</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <form method="POST" action="webpages/home_page/client_testimonial_post.php" enctype="multipart/form-data">
         <div class="form-layout">
@@ -97,12 +95,10 @@ require_once('../../db.php');
 
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Client Testimonial List</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Amazing Clients List</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <div class="card text-start|center|end">
         <div class="card-body">
@@ -156,7 +152,7 @@ require_once('../../db.php');
     </div><!-- card -->
   </div><!-- br-pagebody -->
 
-  <?php
+<?php
   require_once('../../footer.php');
   require_once('../../status.php');
-  ?>
+?>

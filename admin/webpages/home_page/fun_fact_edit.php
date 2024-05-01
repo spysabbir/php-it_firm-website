@@ -21,11 +21,9 @@ require_once('../../db.php');
     <div class="br-pagebody">
         <div class="pd-x-20 pd-sm-x-30 pd-t-20 pd-sm-t-30">
             <h4 class="tx-gray-800 mg-b-5">Edit Fun Fact</h4>
-            <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
 
             <div class="card pd-20 pd-sm-40 mt-4">
                 <h6 class="card-body-title">Edit Fun Fact</h6>
-                <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
                 <form method="POST" action="webpages/home_page/fun_fact_edit_post.php" enctype="multipart/form-data" id="edit_form">
                     <div class="form-layout">

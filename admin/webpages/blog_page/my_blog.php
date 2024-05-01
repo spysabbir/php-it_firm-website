@@ -20,12 +20,10 @@ require_once('../../db.php');
   <div class="br-pagebody">
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Add Blog</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Add Blog</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <form method="POST" action="webpages/blog_page/my_blog_post.php" enctype="multipart/form-data">
         <div class="form-layout">
@@ -75,12 +73,10 @@ require_once('../../db.php');
 
     <div class="title text-center my-5">
       <h4 class="tx-gray-800">Blog List</h4>
-      <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
     </div>
 
     <div class="card pd-20 pd-sm-40 mt-4">
       <h6 class="card-body-title">Blog List</h6>
-      <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
       <div class="row">
         <table id="message_table" class="table table-hover table-bordered table-striped">

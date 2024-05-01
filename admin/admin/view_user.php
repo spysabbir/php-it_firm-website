@@ -18,11 +18,9 @@ require_once('../db.php');
 
     <div class="br-pagebody">
         <h4 class="tx-gray-800 mt-5">User List</h4>
-        <p class="mg-b-0">Introducing Bracket admin template, the most handsome admin template of all time.</p>
 
         <div class="card pd-20 pd-sm-40 mt-4">
             <h6 class="card-body-title">User List</h6>
-            <p class="mg-b-20 mg-sm-b-30">A form with a label on top of each form control.</p>
 
             <div class="row">
                 <table id="message_table" class="table table-hover table-bordered table-striped">

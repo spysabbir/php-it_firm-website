@@ -6,7 +6,6 @@ require_once('../header.php');
 require_once('../db.php');
 ?>
 
-
 <!-- ########## START: MAIN PANEL ########## -->
 <div class="br-mainpanel">
   <div class="br-pageheader pd-y-15 pd-l-20">
@@ -21,9 +20,6 @@ require_once('../db.php');
     <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
       <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
-        <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> Create User <span class="tx-normal">]</span></div>
-        <div class="tx-center mg-b-40">Create an account for using admin panel.</div>
-
         <form action="admin/create_user_post.php" method="post">
 
           <div class="form-group">
@@ -96,25 +92,9 @@ require_once('../db.php');
             unset($_SESSION['password_error']) ?>
           </div><!-- form-group -->
 
-          <div class="form-group">
-            <label class="d-block tx-11 tx-uppercase tx-medium tx-spacing-1">Confirm Password</label>
-            <input type="password" class="form-control" name="confirm_password" placeholder="Enter your confirm password">
-            <?php if (isset($_SESSION['confirm_password_error'])) : ?>
-              <small class="text-danger"><?= $_SESSION['confirm_password_error'] ?></small>
-            <?php endif;
-            unset($_SESSION['confirm_password_error']) ?>
-            <?php if (isset($_SESSION['password_match_error'])) : ?>
-              <small class="text-danger"><?= $_SESSION['password_match_error'] ?></small>
-            <?php endif;
-            unset($_SESSION['password_match_error']) ?>
-          </div><!-- form-group -->
-
-          <div class="form-group tx-12 text-center">By clicking the Sign Up button below, you agreed to our privacy policy and terms of use of our website.</div>
-
           <button type="submit" class="btn btn-info btn-block">Create Account</button>
 
         </form>
-
       </div><!-- login-wrapper -->
     </div><!-- d-flex -->
 

@@ -217,6 +217,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                     <div class="dropdown-menu dropdown-menu-header wd-200">
                         <ul class="list-unstyled user-profile-nav">
                             <li><a href="profile.php"><i class="icon ion-ios-person"></i> View Profile</a></li>
+                            <li><a href="change_password.php"><i class="icon ion-ios-locked"></i> Change Password</a></li>
                             <li><a href="signout.php"><i class="icon ion-power"></i> Sign Out</a></li>
                         </ul>
                     </div><!-- dropdown-menu -->
