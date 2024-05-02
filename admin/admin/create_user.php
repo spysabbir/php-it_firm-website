@@ -19,7 +19,7 @@ require_once('../db.php');
 
     <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
-      <div class="login-wrapper wd-300 wd-xs-400 pd-25 pd-xs-40 bg-white rounded shadow-base">
+      <div class="login-wrapper pd-25 pd-xs-40 bg-white rounded shadow-base">
         <form action="admin/create_user_post.php" method="post">
 
           <div class="form-group">
@@ -68,17 +68,17 @@ require_once('../db.php');
           </div><!-- form-group -->
 
           <div class="form-group">
-            <label>Designation:</label>
-            <select name="designation" class="form-control custom-select">
-              <option value="">Choose your designation</option>
-              <option value="admin" <?= (isset($_SESSION['old_designation']) && $_SESSION['old_designation'] == 'admin') ? 'selected' : '' ?>>Admin</option>
-              <option value="user" <?= (isset($_SESSION['old_designation']) && $_SESSION['old_designation'] == 'user') ? 'selected' : '';
-                                    unset($_SESSION['old_designation']) ?>>User</option>
+            <label>Role:</label>
+            <select name="role" class="form-control custom-select">
+              <option value="">Choose your role</option>
+              <option value="admin" <?= (isset($_SESSION['old_role']) && $_SESSION['old_role'] == 'admin') ? 'selected' : '' ?>>Admin</option>
+              <option value="user" <?= (isset($_SESSION['old_role']) && $_SESSION['old_role'] == 'user') ? 'selected' : '';
+                                    unset($_SESSION['old_eole']) ?>>User</option>
             </select>
-            <?php if (isset($_SESSION['designation_error'])) : ?>
-              <small class="text-danger"><?= $_SESSION['designation_error'] ?></small>
+            <?php if (isset($_SESSION['role_error'])) : ?>
+              <small class="text-danger"><?= $_SESSION['role_error'] ?></small>
             <?php endif;
-            unset($_SESSION['designation_error'])
+            unset($_SESSION['role_error'])
             ?>
           </div><!-- form-group -->
 

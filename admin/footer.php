@@ -15,21 +15,6 @@
     <!-- ########## END: MAIN PANEL ########## -->
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-    <script>
-        $(document).ready(function() {
-            $('#message_table').DataTable({
-                dom: 'Bfrtip',
-                buttons: [
-                    'copyHtml5',
-                    'excelHtml5',
-                    'csvHtml5',
-                    'pdfHtml5',
-                    'print'
-                ]
-            });
-        });
-    </script>
-    <script src="lib/jquery/jquery.js"></script>
     <script src="lib/popper.js/popper.js"></script>
     <script src="lib/bootstrap/bootstrap.js"></script>
     <script src="lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
@@ -56,6 +41,21 @@
     <script src="lib/datatables/buttons/js/buttons.print.min.js"></script>
     <!-- summernote -->
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-bs4.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            $('#message_table').DataTable({
+                dom: 'Bfrtip',
+                buttons: [
+                    'copyHtml5',
+                    'excelHtml5',
+                    'csvHtml5',
+                    'pdfHtml5',
+                    'print'
+                ]
+            });
+        });
+    </script>
 
     <script>
         $(function() {

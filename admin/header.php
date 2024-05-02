@@ -147,7 +147,7 @@ $count_query1 = "SELECT COUNT(*) AS total_unread_message FROM contacts_messages 
                 </div><!-- menu-item -->
             </a><!-- br-menu-link -->
 
-            <?php if (spy_sabbir_single_select('users', $_SESSION['user_id'])['designation'] == 'admin') : ?>
+            <?php if (spy_sabbir_single_select('users', $_SESSION['user_id'])['role'] == 'admin') : ?>
             <label class="sidebar-label pd-x-15 mg-y-10 tx-info op-9">Admin</label>
             <a href="#" class="br-menu-link <?= (isset($user)) ? 'active show-sub' : '' ?>">
                 <div class="br-menu-item">

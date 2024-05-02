@@ -8,7 +8,7 @@ $total_user_query = "SELECT COUNT(*) AS total_user FROM users";
 $total_user = mysqli_fetch_assoc(mysqli_query(connect_to_db(), $total_user_query))['total_user'];
 
 // Total Admin
-$total_admin_query = "SELECT COUNT(*) AS total_admin FROM users WHERE designation = 'admin'";
+$total_admin_query = "SELECT COUNT(*) AS total_admin FROM users WHERE role = 'admin'";
 $total_admin = mysqli_fetch_assoc(mysqli_query(connect_to_db(), $total_admin_query))['total_admin'];
 
 // Total Services

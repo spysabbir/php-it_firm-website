@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 01, 2024 at 04:18 PM
--- Server version: 10.4.32-MariaDB
--- PHP Version: 8.2.12
+-- Generation Time: May 02, 2024 at 08:21 AM
+-- Server version: 10.4.27-MariaDB
+-- PHP Version: 8.2.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -418,7 +418,7 @@ INSERT INTO `theme_default` (`id`, `default_item_name`, `default_item_value`) VA
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `full_name` varchar(100) NOT NULL,
-  `designation` varchar(50) NOT NULL DEFAULT 'user',
+  `role` varchar(50) NOT NULL DEFAULT 'user',
   `gender` varchar(10) NOT NULL,
   `date_of_birth` date NOT NULL,
   `email_address` varchar(200) NOT NULL,
@@ -432,9 +432,9 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `full_name`, `designation`, `gender`, `date_of_birth`, `email_address`, `phone_number`, `password`, `profile_img`, `created_at`) VALUES
+INSERT INTO `users` (`id`, `full_name`, `role`, `gender`, `date_of_birth`, `email_address`, `phone_number`, `password`, `profile_img`, `created_at`) VALUES
 (1, 'Sabbir Ahammed', 'admin', 'male', '1999-10-09', 'admin@email.com', '+8801953 321402', '25d55ad283aa400af464c76d713c07ad', '18781332681634791165.png', '2021-10-21 10:37:12'),
-(3, 'Md Sabbir Ahammed', 'user', 'male', '0000-00-00', 'sovon@gmail.com', '', '25d55ad283aa400af464c76d713c07ad', '7855577581714570492.png', '2024-05-01 17:42:16');
+(3, 'Md Sabbir Ahammed', 'user', 'male', '0000-00-00', 'user@email.com', '', '25d55ad283aa400af464c76d713c07ad', '7855577581714570492.png', '2024-05-01 17:42:16');
 
 -- --------------------------------------------------------
 

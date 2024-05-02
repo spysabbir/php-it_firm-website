@@ -23,11 +23,11 @@ if (!isset($_POST['gender'])) {
     $_SESSION['old_gender'] = $_POST['gender'];
 }
 
-if (!$_POST['designation']) {
-    $_SESSION['designation_error'] = "Please select your designation.";
+if (!$_POST['role']) {
+    $_SESSION['role_error'] = "Please select your role.";
     $signup_ability = false;
 } else {
-    $_SESSION['old_designation'] = $_POST['designation'];
+    $_SESSION['old_role'] = $_POST['role'];
 }
 
 if (!empty($_POST["password"]) && $_POST["password"] != "") {
@@ -57,7 +57,7 @@ if($signup_ability){
     $full_name = $_POST['full_name'];
     $email_address = $_POST['email_address'];
     $gender = $_POST['gender'];
-    $designation = $_POST['designation'];
+    $role = $_POST['role'];
     $password = md5($_POST['password']);
 
     $email_address_check_query = "SELECT COUNT(*) AS email_check FROM users WHERE email_address = '$email_address'";
@@ -68,7 +68,7 @@ if($signup_ability){
         date_default_timezone_set('Asia/Dhaka');
         $current_date_time = date('Y-m-d H:i:s');
         
-        $insert_query = "INSERT INTO users (full_name, email_address, gender, designation, password, created_at) VALUES ( '$full_name', '$email_address', '$gender', '$designation', '$password', '$current_date_time')";
+        $insert_query = "INSERT INTO users (full_name, email_address, gender, role, password, created_at) VALUES ( '$full_name', '$email_address', '$gender', '$role', '$password', '$current_date_time')";
         mysqli_query(connect_to_db(), $insert_query);
 
         $_SESSION['successfully_status'] = "Account created Successfully";
@@ -76,7 +76,7 @@ if($signup_ability){
         unset($_SESSION['old_full_name']);
         unset($_SESSION['old_email_address']);
         unset($_SESSION['old_gender']);
-        unset($_SESSION['old_designation']);
+        unset($_SESSION['old_role']);
         header('location: view_user.php');
     }
 }

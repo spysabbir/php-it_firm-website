@@ -81,7 +81,7 @@ if($submit_ability){
     // Photo Upload End
 
     $portfolio_name = $_POST['portfolio_name'];
-    $designation = $_POST['designation'];
+    $role = $_POST['role'];
     $portfolio_category_name = $_POST['portfolio_category_name'];
     $live_portfolio_link = $_POST['live_portfolio_link'];
     $portfolio_details = htmlspecialchars($_POST['portfolio_details'], ENT_QUOTES);

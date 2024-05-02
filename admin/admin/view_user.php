@@ -27,7 +27,7 @@ require_once('../db.php');
                             <tr>
                                 <th class="text-center">Serial No</th>
                                 <th class="text-center">Full Name</th>
-                                <th class="text-center">Designation</th>
+                                <th class="text-center">Role</th>
                                 <th class="text-center">Gender </th>
                                 <th class="text-center">Date Of Birth </th>
                                 <th class="text-center">Email Address</th>
@@ -50,7 +50,7 @@ require_once('../db.php');
                                         <?= $single_user['full_name'] ?>
                                     </td>
                                     <td>
-                                        <?= ucfirst($single_user['designation']) ?>
+                                        <?= ucfirst($single_user['role']) ?>
                                     </td>
                                     <td>
                                         <?= ucfirst($single_user['gender']) ?>

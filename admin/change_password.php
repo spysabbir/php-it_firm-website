@@ -20,7 +20,7 @@ require_once('db.php');
         <img src="img/<?= spy_sabbir_single_select('users', $_SESSION['user_id'])['profile_img'] ?>" alt="">
       </div><!-- card-profile-img -->
       <h4 class="tx-normal tx-roboto tx-white"><?= spy_sabbir_single_select('users', $_SESSION['user_id'])['full_name'] ?></h4>
-      <p class="mg-b-25"><?= ucfirst(spy_sabbir_single_select('users', $_SESSION['user_id'])['designation']) ?></p>
+      <p class="mg-b-25"><?= ucfirst(spy_sabbir_single_select('users', $_SESSION['user_id'])['role']) ?></p>
     </div><!-- card-body -->
   </div><!-- card -->
 

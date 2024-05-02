@@ -12,7 +12,7 @@ require_once('db.php')
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Meta -->
-  <meta name="description" content="Premium Quality and Responsive UI for Dashboard.">
+  <meta name="description" content="<?= spy_sabbir_update('theme_default', 'company_name'); ?> Dashboard.">
   <meta name="author" content="<?= spy_sabbir_update('theme_default', 'company_name'); ?>">
 
   <title><?= spy_sabbir_update('theme_default', 'company_name'); ?> | Admin Template | Sign In</title>
@@ -29,8 +29,10 @@ require_once('db.php')
 
   <div class="d-flex align-items-center justify-content-center bg-br-primary ht-100v">
 
-    <div class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white rounded shadow-base">
-      <div class="signin-logo tx-center tx-28 tx-bold tx-inverse"><span class="tx-normal">[</span> <?= spy_sabbir_update('theme_default', 'company_name'); ?> <span class="tx-normal">]</span></div>
+    <div class="login-wrapper pd-25 pd-xs-40 bg-white rounded shadow-base">
+      <div class="signin-logo tx-center tx-28 tx-bold tx-inverse">
+        <span class="tx-normal">[</span> <?= spy_sabbir_update('theme_default', 'company_name'); ?> <span class="tx-normal">]</span>
+      </div>
       <div class="tx-center mg-b-60">Authorized sign-in panel for maintenance</div>
 
       <?php if (isset($_SESSION['signin_error'])) : ?>
@@ -63,24 +65,29 @@ require_once('db.php')
         <button type="submit" class="btn btn-info btn-block">Sign In</button>
       </form>
 
-     <div class="demo my-2">
+      <div class="demo my-2">
         <h5 class="text-center">Demo User Login Details</h5>
-        <div class="table-responsive">
-          <table class="table table-primary">
+        <table class="table table-primary">
             <thead>
               <tr>
                 <th>Email</th>
                 <th>Password</th>
+                <th>Role</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>admin@email.com</td>
                 <td>12345678</td>
+                <td>Admin</td>
+              </tr>
+              <tr>
+                <td>user@email.com</td>
+                <td>12345678</td>
+                <td>User</td>
               </tr>
             </tbody>
           </table>
-        </div>
       </div>
 
       <div class="mg-t-60 tx-center">If you not an authorized person? Please don't try to sign in.</div>
