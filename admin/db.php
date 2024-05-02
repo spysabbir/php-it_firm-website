@@ -4,7 +4,7 @@ function connect_to_db(){
 $hostname = "localhost";
 $username = "root"; 
 $password = "";
-$database_name = "php_spy_it_firm";
+$database_name = "it_firm-website";
 return $db_connect = mysqli_connect($hostname, $username, $password, $database_name);
 }
 

@@ -14,8 +14,6 @@ endif;
 unset($_SESSION['successfully_status']);
 ?>
 
-
-
 <?php if (isset($_SESSION['error_status'])) :
 ?>
 

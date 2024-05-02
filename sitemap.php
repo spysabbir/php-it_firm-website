@@ -11,7 +11,7 @@ require_once('header.php');
                     <div class="col-lg-8 m-auto">
                         <div class="banner_text">
                             <h1>Site Map</h1>
-                            <p> Version : 1.1.1 , Last Save : 26-May-2023 , Page Count : 10 </p>
+                            <p> Version : 1.1.1 , Last Save : 02-May-2024 , Page Count : 10 </p>
                             <nav aria-label="breadcrumb">
                                 <ul class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="index.php"><i class="fas fa-home"></i> Home</a>
